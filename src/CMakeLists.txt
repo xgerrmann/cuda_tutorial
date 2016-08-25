@@ -15,8 +15,10 @@ if(${CUDA_FOUND})
 endif()
 #-------------------
 cuda_add_executable(addition addition.cu)
+cuda_add_executable(addition_parallel addition_parallel.cu)
 
 ## Linker
 ##-------------------
 target_link_libraries(addition	${CUDA_LIBRARIES})
+target_link_libraries(addition_parallel	${CUDA_LIBRARIES})
 
