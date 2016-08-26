@@ -16,9 +16,13 @@ endif()
 #-------------------
 cuda_add_executable(addition addition.cu)
 cuda_add_executable(addition_parallel addition_parallel.cu)
+cuda_add_executable(addition_threads addition_threads.cu)
+cuda_add_executable(addition_threads_and_blocks addition_threads_and_blocks.cu)
 
 ## Linker
 ##-------------------
 target_link_libraries(addition	${CUDA_LIBRARIES})
 target_link_libraries(addition_parallel	${CUDA_LIBRARIES})
+target_link_libraries(addition_threads	${CUDA_LIBRARIES})
+target_link_libraries(addition_threads_and_blocks	${CUDA_LIBRARIES})
 
